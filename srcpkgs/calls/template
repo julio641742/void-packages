@@ -1,0 +1,16 @@
+# Template file for 'calls'
+pkgname=calls
+version=0.1.7
+revision=1
+wrksrc=$pkgname-v$version
+build_style=meson
+configure_args="-Dtests=false"
+hostmakedepends="glib-devel gettext vala pkg-config wayland-devel evolution-data-server-devel"
+makedepends="folks-devel libhandy-devel libpeas-devel gom-devel ModemManager-devel feedbackd-devel"
+depends="NetworkManager"
+short_desc="Phone call application"
+maintainer="Julio Galvan <julio@epazote.net>"
+license="GPL-3.0-or-later"
+homepage="https://gitlab.gnome.org/Community/Purism/calls"
+distfiles="https://source.puri.sm/Librem5/calls/-/archive/v$version/calls-v$version.tar.gz"
+checksum=477c55d483ca13f6ac98209c3c4d6c5858f706e72a133616dcb6827ef25829c7
