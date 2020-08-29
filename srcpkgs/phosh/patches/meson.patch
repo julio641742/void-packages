@@ -1,0 +1,10 @@
+--- meson.build	2020-08-02 09:47:19.000000000 -0700
++++ meson.build	2020-08-28 16:50:25.592370097 -0700
+@@ -152,7 +152,6 @@
+   'Phosh @0@'.format(meson.project_version()),
+   '',
+   '        Tests: @0@'.format(get_option('tests')),
+-  '   Phoc Tests: @0@'.format(run_phoc_tests),
+   'Documentation: @0@'.format(get_option('gtk_doc')),
+   '-----------',
+ ]

@@ -1,0 +1,20 @@
+# Template file for 'phosh'
+pkgname=phosh
+version=0.4.3
+revision=1
+build_style=meson
+configure_args="-Dtests=false -Dphoc_tests=disabled"
+hostmakedepends="glib-devel gettext pkg-config wayland-devel"
+makedepends="feedbackd-devel gcr-devel gnome-desktop-devel pam-devel polkit-devel pulseaudio-devel libsecret-devel libhandy-devel NetworkManager-devel upower-devel"
+depends="phoc squeekboard"
+short_desc="Shell PoC for the Librem5"
+maintainer="Julio Galvan <julio-void@epazote.net>"
+license="GPL-3.0-or-later"
+homepage="https://source.puri.sm/Librem5/phosh"
+distfiles="https://repo.pureos.net/pureos/pool/main/p/phosh/phosh_$version.tar.xz"
+checksum=c6fc68aafaf78412637b0f509aafbbca877bda3fe19511bf340b824d7cdbd4ee
+
+post_install() {
+	vcopy ${FILESDIR}/sm.puri.OSK0.desktop usr/share/applications
+	vcopy ${FILESDIR}/sm.puri.Phosh.desktop usr/share/applications
+}
